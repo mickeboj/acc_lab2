@@ -1,4 +1,4 @@
-from celery import app
+from .capp import app
 import json
 
 
