@@ -1,5 +1,5 @@
 from __future__ import absolute_import, unicode_literals
-from celery import celery
+from celery import Celery
 from misc.constants import rabbitmq
 
 app = Celery('proj',
