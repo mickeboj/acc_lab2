@@ -67,8 +67,8 @@ def get_wordcount():
         while all(not result.ready() for result in res):
             pass
         for result in res:
-            for word in result.keys():
-                res_d[word] = res_d.get(word,0) + result[word]
+            for word in result.get().keys():
+                res_d[word] = res_d.get(word,0) + result.get()[word]
         return jsonify(res_d)
 
 
