@@ -63,7 +63,7 @@ def get_wordcount():
         res_d = {}
         res = [None]*(len(FILES)-1)
         for i in range(len(FILES)):
-            res[i] = count_file.delay(fn,res_d,WORDS)
+            res[i] = count_file.delay(FILES[i],res_d,WORDS)
         while all(not result.ready() for result in res):
             pass
         for result in res:
