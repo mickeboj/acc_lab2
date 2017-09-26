@@ -27,7 +27,7 @@ In .py file:
 
 from celery import Celery
 
-app = Celery('tasks', broker='pyamqp://guest@localhost//')
+app = Celery('tasks', broker='amqp://<user>:<pwd>@localhost:5672/<hostname>')
 
 @app.task
 def add(x, y):
