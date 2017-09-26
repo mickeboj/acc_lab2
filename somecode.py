@@ -25,7 +25,7 @@ def count_file(fn,w_count,words):
             for word in tweet.split():
                     if word in words:
                             w_count[word.encode('ascii','ignore')] = w_count.get(word, 0) + 1
-        return w_count
+    return w_count
 
 if __name__== "__main__":
     words  = ["han","hon","hen","den","det","denne","denna"]
