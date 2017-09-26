@@ -15,7 +15,6 @@ def count_file(fn,w_count,words):
     fd = open("tweets/"+fn)
     str_l = fd.read().split("\n\n")
     str_l.pop()
-    tweets = []
     for str_e in str_l:
             tweet = json.loads(str_e)["text"]
             if tweet.split()[0]=="RT":
