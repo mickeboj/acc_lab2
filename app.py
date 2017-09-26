@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from count.wordcount import count_file
+from tasks import count_file
 app = Flask(__name__)
 
 WORDS  = ["han","hon","hen","den","det","denne","denna"]
@@ -62,7 +62,7 @@ FILES =[
 def get_wordcount():
         res_d = {}
         for fn in FILES:
-            res_d = count_file(fn,res_d,WORDS)
+            res_d = count_file.delay(fn,res_d,WORDS).get()
         return jsonify(res_d)
 
 
