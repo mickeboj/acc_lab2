@@ -1,3 +1,4 @@
+from ../celery import app
 import json
 
 
@@ -10,7 +11,7 @@ def tweet_clean(tweet):
         tweet = tweet.replace(";","")
         return tweet
 
-
+@app.task
 def count_file(fn,w_count,words):
     fd = open("tweets/"+fn)
     str_l = fd.read().split("\n\n")
