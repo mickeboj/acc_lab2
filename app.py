@@ -64,11 +64,11 @@ def get_wordcount():
         res = [None]*(len(FILES)-1)
         for i in range(len(FILES)):
             res[i] = count_file.delay(fn,res_d,WORDS)
-        while all(!result.ready() for result in res):
+        while all(not result.ready() for result in res):
             pass
         for result in res:
             for word in result.keys():
-                res_d[word] = res_d.get(word,0) + result[word] 
+                res_d[word] = res_d.get(word,0) + result[word]
         return jsonify(res_d)
 
 
