@@ -62,7 +62,7 @@ FILES =[
 def get_wordcount():
         res_d = {}
         for fn in FILES:
-            res_d = count_file("05cb5036-2170-401b-947d-68f9191b21c6",res_d,WORDS)
+            res_d = count_file(fn,res_d,WORDS)
         return jsonify(res_d)
 
 

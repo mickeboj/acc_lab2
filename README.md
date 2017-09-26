@@ -1,7 +1,7 @@
 # Code for Applied Cloud Computing Lab 2
 
 ### To test api
-http://<IP>:5000/wordcount/api/v1.0/get_wordcount
+http://130.239.81.181:5000/wordcount/api/v1.0/get_wordcount
 
 
 ## Packages installed on VM
