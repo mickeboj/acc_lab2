@@ -1,5 +1,5 @@
 from __future__ import absolute_import, unicode_literals
-from .capp import app
+from capp import app
 import json
 
 
