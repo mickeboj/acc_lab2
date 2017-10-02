@@ -14,7 +14,7 @@ pip install celery
 
 
 ### rabbitmq
-sudo apt-get install rabbitmq server
+sudo apt-get install rabbitmq-server
 
 ### starting and stopping
 sudo rabbitmq-server
