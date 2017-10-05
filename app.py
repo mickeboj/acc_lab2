@@ -60,9 +60,9 @@ FILES =[
 
 @app.route('/wordcount/api/v1.0/get_wordcount', methods=['GET'])
 def get_wordcount():
-        res_d = {}
         res = [None]*(len(FILES))
         for i in range(len(FILES)):
+            res_d = {}
             res[i] = count_file.delay(FILES[i],res_d,WORDS)
         while all(not result.ready() for result in res):
             pass
