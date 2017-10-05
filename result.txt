@@ -47,6 +47,12 @@
 5 workers 2VM
 0m29.466s
 
+6 workers 2VM
+0m32.043s
+
+8 workers 2VM
+0m32.646s
+
 6 workers 3VM
 0m19.589s
 
